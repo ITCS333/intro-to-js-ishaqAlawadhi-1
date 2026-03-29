@@ -14,9 +14,8 @@ function sum(a, b) {
  */
 function reverseString(str) {
   // TODO: Implement this function.
-  return str.split(').reverse().join(');
+  return str.split('').reverse().join('');
 }
-
 /**
  * @param {number[]} numbers An array of numbers.
  * @returns {number} The largest number in the array. Return null if the array is empty.
@@ -44,7 +43,7 @@ function findLargest(numbers) {
 function isPalindrome(str) {
   // TODO: Implement this function.
   const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const reversedStr = reverseString(cleanedStr);
+  const reversedStr = cleanedStr.split('').reverse().join('');
   return cleanedStr === reversedStr;
 }
 
@@ -56,9 +55,6 @@ function filterEvenNumbers(numbers) {
   // TODO: Implement this function.
   return numbers.filter(num => num % 2 === 0);
 }
-  // اشرح ما الذي يقوم بعمله هذه الوضيفة
-
-
 
 // Do not edit the line below.
 module.exports = {
@@ -68,4 +64,3 @@ module.exports = {
   isPalindrome,
   filterEvenNumbers,
 };
-
